@@ -1,0 +1,13 @@
+﻿@model Web.Models.HomeIndexViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+    @foreach (var user in Model.Users)
+    {
+        @user.Firstname 
+            <img src="@Url.Action("GetImg", "ImageController", new { id = 1 })" alt="@user.Firstname" />
+        
+    }
